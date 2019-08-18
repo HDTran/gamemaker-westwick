@@ -222,7 +222,12 @@
       <script>scripts\animation_end.gml</script>
       <script>scripts\animation_hit_frame.gml</script>
     </scripts>
+    <script>scripts\move.gml</script>
   </scripts>
+  <objects name="objects">
+    <object>objects\o_elizabeth</object>
+    <object>objects\o_solid</object>
+  </objects>
   <rooms name="rooms">
     <room>rooms\r_town</room>
     <room>rooms\r_letter</room>
