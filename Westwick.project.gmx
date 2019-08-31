@@ -223,8 +223,12 @@
       <script>scripts\animation_hit_frame.gml</script>
     </scripts>
     <script>scripts\move.gml</script>
+    <script>scripts\get_facing.gml</script>
+    <script>scripts\get_input.gml</script>
+    <script>scripts\elizabeth_move_state.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\o_input</object>
     <object>objects\o_elizabeth</object>
     <object>objects\o_solid</object>
   </objects>
