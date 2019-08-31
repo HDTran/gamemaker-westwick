@@ -55,7 +55,6 @@
     <instance objName="o_solid" x="176" y="0" name="inst_53C528A2" locked="0" code="" scaleX="2" scaleY="2" colour="4294967295" rotation="0"/>
     <instance objName="o_solid" x="160" y="16" name="inst_7960BFAF" locked="0" code="" scaleX="1" scaleY="3" colour="4294967295" rotation="0"/>
     <instance objName="o_solid" x="96" y="48" name="inst_58A8299B" locked="0" code="" scaleX="4" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_input" x="80" y="96" name="inst_65D4CD03" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="b_dirt" x="288" y="112" w="16" h="16" xo="16" yo="32" id="10000097" name="inst_ADAF3042" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

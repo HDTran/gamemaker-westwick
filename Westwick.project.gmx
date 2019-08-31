@@ -229,6 +229,7 @@
     <script>scripts\view_follow_elizabeth_state.gml</script>
   </scripts>
   <objects name="objects">
+    <object>objects\o_game</object>
     <object>objects\o_input</object>
     <object>objects\o_elizabeth</object>
     <object>objects\o_solid</object>
@@ -236,6 +237,7 @@
     <object>objects\o_view</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\r_init</room>
     <room>rooms\r_town</room>
     <room>rooms\r_letter</room>
     <room>rooms\r_game_over</room>
@@ -260,7 +262,6 @@
     </rooms>
     <room>rooms\r_battle</room>
     <room>rooms\r_blank</room>
-    <room>rooms\r_init</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
