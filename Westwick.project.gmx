@@ -226,11 +226,14 @@
     <script>scripts\get_facing.gml</script>
     <script>scripts\get_input.gml</script>
     <script>scripts\elizabeth_move_state.gml</script>
+    <script>scripts\view_follow_elizabeth_state.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_input</object>
     <object>objects\o_elizabeth</object>
     <object>objects\o_solid</object>
+    <object>objects\o_view_parent</object>
+    <object>objects\o_view</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_town</room>
