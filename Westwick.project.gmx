@@ -229,6 +229,7 @@
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
     <script>scripts\elizabeth_wait_state.gml</script>
+    <script>scripts\get_class_data.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_game</object>
@@ -240,6 +241,7 @@
     <object>objects\o_door</object>
     <object>objects\o_start_position</object>
     <object>objects\o_fade_transition</object>
+    <object>objects\o_data</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
