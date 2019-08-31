@@ -236,6 +236,8 @@
     <object>objects\o_solid</object>
     <object>objects\o_view_parent</object>
     <object>objects\o_view</object>
+    <object>objects\o_door</object>
+    <object>objects\o_start_position</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>

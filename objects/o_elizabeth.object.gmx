@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>s_mask</maskName>
   <events>
@@ -30,6 +30,7 @@ spd = 2;
 image_speed = 0;
 facing = RIGHT;
 state = elizabeth_move_state;
+last_room = room;
 
 // Create the sprite array
 sprite[RIGHT] = s_elizabeth_right;
@@ -71,6 +72,30 @@ sprite_index = sprite[facing];
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="o_door">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// go to the next room
+room_goto(other.next_room);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -88,7 +113,22 @@ sprite_index = sprite[facing];
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create the view
+            <string>/// move to the start position
+if (instance_exists(o_start_position)) {
+    with (o_start_position) {
+        // compare o_start_position's last_room with elizabeth's last_room
+        if (last_room == other.last_room) {
+            // set elizabeth's position
+            other.x = x;
+            other.y = y;
+        }
+    }
+}
+
+// update the last room
+last_room = room;
+
+// create the view
 if (!instance_exists(o_view)) {
     instance_create(x+8, y+8, o_view);
 }
