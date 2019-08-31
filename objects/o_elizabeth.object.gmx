@@ -61,6 +61,9 @@ sprite[DOWN] = s_elizabeth_down;
             <string>/// Control the state
 script_execute(state);
 
+// set the depth
+depth = -y;
+
 // update the sprite
 sprite_index = sprite[facing];
 </string>

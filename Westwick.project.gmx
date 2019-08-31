@@ -227,6 +227,7 @@
     <script>scripts\get_input.gml</script>
     <script>scripts\elizabeth_move_state.gml</script>
     <script>scripts\view_follow_elizabeth_state.gml</script>
+    <script>scripts\set_tile_depth.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\o_game</object>
