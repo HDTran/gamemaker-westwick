@@ -72,6 +72,73 @@ ds_map_destroy(stats);
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// update the draw health
+var dis = draw_health - stats[? "health"];
+if (dis &gt; 1) {
+    draw_health = lerp(draw_health, stats[? "health"], .1);
+} else {
+    draw_health = stats[? "health"];
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// update the stats for death and level up
+
+// check for death
+if (draw_health &lt;= 0) {
+   room_goto(r_game_over);
+}
+
+// check for level up
+if (stats[? "experience"] &gt;= stats[? "maxexperience"]) {
+   // update the stats
+   level++;
+   stats[? "experience"] = stats[? "experience"]-stats[? "maxexperience"]; // keep leftover exp
+   stats[? "maxexperience"] = level*10;
+   stats[? "health"] = calculate_health(level, class[? "health"]);
+   stats[? "maxhealth"] = stats[? "health"];
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
   <PhysicsObjectSensor>0</PhysicsObjectSensor>

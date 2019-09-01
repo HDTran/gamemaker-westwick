@@ -2,7 +2,7 @@
 var class_string = argument0;
 
 // create and copy the stats
-var stats = json_decode(json_encode(o_data.classes[? class_string])); // clone
+var stats = json_decode(json_encode(o_data.classes[? class_string])); // clone properly, otherwise inner arrays and objects would be reference copies instead of full copies
 
 // set the max health and health
 stats[? "maxhealth"] = calculate_health(level, stats[? "health"]);
