@@ -249,6 +249,9 @@
     <object>objects\o_data</object>
     <object>objects\o_random_encounters</object>
     <object>objects\o_last_encounter</object>
+    <object>objects\o_decoration_parent</object>
+    <object>objects\o_stump</object>
+    <object>objects\o_rock</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
@@ -276,6 +279,7 @@
     </rooms>
     <room>rooms\r_battle</room>
     <room>rooms\r_blank</room>
+    <room>rooms\r_north_meadow</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
