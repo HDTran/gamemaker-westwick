@@ -31,7 +31,7 @@ max_action_meter = 100;
 item_index = 0;
 
 // set up the state
-state = noone;
+state = battle_idle_state;
 
 // create the battle unit ui
 var unit_ui = instance_create(xstart, 16, o_battle_unit_ui);
@@ -72,6 +72,30 @@ if (object_index == o_enemy_battle_unit) {
 // stop the play and view states
 o_battle.play = false;
 o_battle_view.state = battle_view_idle_state;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// execute the state
+script_execute(state);
 </string>
           </argument>
         </arguments>

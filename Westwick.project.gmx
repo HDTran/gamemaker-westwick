@@ -244,6 +244,8 @@
     </scripts>
     <script>scripts\init_battle_unit.gml</script>
     <script>scripts\draw_bar.gml</script>
+    <script>scripts\battle_idle_state.gml</script>
+    <script>scripts\battle_action_state.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">

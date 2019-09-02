@@ -6,7 +6,7 @@ var stats = json_decode(json_encode(o_data.classes[? class_string])); // clone p
 
 // set the max health and health
 stats[? "maxhealth"] = calculate_health(level, stats[? "health"]);
-stats[? "health"] = calculate_health(level, stats[? "maxhealth"]);
+stats[? "health"] = stats[? "maxhealth"];
 
 // set experience
 if (object_index == o_player_stats) {
