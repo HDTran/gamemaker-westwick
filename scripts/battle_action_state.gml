@@ -3,5 +3,5 @@
 depth = -1;
 
 if (o_input.action) {
-    // battle_approach_state;
+    state = battle_approach_state;
 }
