@@ -244,25 +244,36 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\o_game</object>
-    <object>objects\o_input</object>
-    <object>objects\o_player_stats</object>
-    <object>objects\o_elizabeth</object>
-    <object>objects\o_solid</object>
-    <object>objects\o_view_parent</object>
-    <object>objects\o_view</object>
-    <object>objects\o_door</object>
-    <object>objects\o_start_position</object>
-    <object>objects\o_fade_transition</object>
-    <object>objects\o_battle_transition</object>
-    <object>objects\o_data</object>
-    <object>objects\o_random_encounters</object>
-    <object>objects\o_last_encounter</object>
-    <object>objects\o_decoration_parent</object>
-    <object>objects\o_stump</object>
-    <object>objects\o_rock</object>
-    <object>objects\o_battle_view</object>
-    <object>objects\o_parallax</object>
+    <objects name="Main">
+      <object>objects\o_view_parent</object>
+      <object>objects\o_game</object>
+      <object>objects\o_input</object>
+      <object>objects\o_view</object>
+      <object>objects\o_data</object>
+      <object>objects\o_player_stats</object>
+    </objects>
+    <objects name="Battle">
+      <object>objects\o_battle_transition</object>
+      <object>objects\o_battle_view</object>
+      <object>objects\o_battle</object>
+      <object>objects\o_parallax</object>
+    </objects>
+    <objects name="Misc">
+      <object>objects\o_solid</object>
+      <object>objects\o_door</object>
+      <object>objects\o_start_position</object>
+      <object>objects\o_fade_transition</object>
+      <object>objects\o_random_encounters</object>
+      <object>objects\o_last_encounter</object>
+    </objects>
+    <objects name="Characters">
+      <object>objects\o_elizabeth</object>
+    </objects>
+    <objects name="Decorations">
+      <object>objects\o_stump</object>
+      <object>objects\o_decoration_parent</object>
+      <object>objects\o_rock</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
