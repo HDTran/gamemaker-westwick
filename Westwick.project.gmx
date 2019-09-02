@@ -250,6 +250,7 @@
       <script>scripts\elizabeth_move_state.gml</script>
       <script>scripts\encounter.gml</script>
       <script>scripts\move.gml</script>
+      <script>scripts\activate_interactable_object.gml</script>
     </scripts>
     <scripts name="View Scripts">
       <script>scripts\view_screenshake.gml</script>
@@ -291,6 +292,7 @@
       <object>objects\o_fade_transition</object>
       <object>objects\o_random_encounters</object>
       <object>objects\o_last_encounter</object>
+      <object>objects\o_interactable_parent</object>
     </objects>
     <objects name="Characters">
       <object>objects\o_elizabeth</object>

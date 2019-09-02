@@ -702,7 +702,7 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="13">
+    <constants number="14">
       <constant name="FONT_CHARS">"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.,!?'-+/:"</constant>
       <constant name="RIGHT">0</constant>
       <constant name="UP">1</constant>
@@ -716,6 +716,7 @@
       <constant name="HIT">4</constant>
       <constant name="RANGED">5</constant>
       <constant name="BATTLE_SPACE">160</constant>
+      <constant name="ACTIVATE">0</constant>
     </constants>
   </ConfigConstants>
 </Config>

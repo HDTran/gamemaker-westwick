@@ -18,3 +18,10 @@ if (!instance_exists(o_last_encounter)) {
         encounter();
     }
 }
+
+// get the direction we are facing
+var xdir = lengthdir_x(8, facing*90);
+var ydir = lengthdir_y(8, facing*90);
+
+// check for the interactable object
+activate_interactable_object(xdir, ydir);
