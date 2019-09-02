@@ -234,6 +234,14 @@
     <script>scripts\get_stats_from_class.gml</script>
     <script>scripts\encounter.gml</script>
     <script>scripts\view_approach.gml</script>
+    <script>scripts\view_screenshake.gml</script>
+    <scripts name="Battle Scripts">
+      <scripts name="Battle View State Scripts">
+        <script>scripts\battle_view_intro_state.gml</script>
+        <script>scripts\battle_view_idle_state.gml</script>
+        <script>scripts\battle_view_focus_state.gml</script>
+      </scripts>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\o_game</object>
@@ -253,6 +261,7 @@
     <object>objects\o_decoration_parent</object>
     <object>objects\o_stump</object>
     <object>objects\o_rock</object>
+    <object>objects\o_battle_view</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
