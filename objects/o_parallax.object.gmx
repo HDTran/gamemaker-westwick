@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>o_view_parent</parentName>
+  <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,12 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle camera
-event_inherited();
-spd = .1;
-x = 256; // starting x
-y = room_height/2; // starting y
-state = battle_view_intro_state;
+            <string>/// init the backgrounds
+
+var index = 0;
+
+// 8 for each background
+repeat (8) {
+    // get current position of background
+    background_xstart[index] = background_x[index];
+    index++;
+}
+
+// set the start position for background 7
+background_xstart[7] = 300;
 </string>
           </argument>
         </arguments>
@@ -53,9 +60,30 @@ state = battle_view_intro_state;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// execute the state
-event_inherited();
-script_execute(state);
+            <string>/// update the background positions
+// get scales incase we need to zoom
+var xscale = view_wview[0]/(room_width/2);
+var yscale = view_hview[0]/(room_height/2);
+
+// sky, follow the view since it's far
+background_x[0] = view_xview[0];
+background_y[0] = view_yview[0];
+background_xscale[0] = xscale;
+background_yscale[0] = yscale;
+
+// mountains
+// view's x position a little bit, plus where background was--only small lag
+background_x[1] = (view_xview[0]/1.25) + background_xstart[1];
+background_y[1] = (view_yview[0]/2.75);
+
+// other backgrounds
+background_x[2] = (view_xview[0]/2) + background_xstart[2];
+background_x[3] = (view_xview[0]/2.75) + background_xstart[3];
+
+// foregrounds
+background_x[5] = background_xstart[5] - (view_xview[0]/2.75);
+background_x[6] = background_xstart[6] - (view_xview[0]);
+background_x[7] = background_xstart[7] - (view_xview[0]/0.8);
 </string>
           </argument>
         </arguments>

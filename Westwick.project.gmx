@@ -262,6 +262,7 @@
     <object>objects\o_stump</object>
     <object>objects\o_rock</object>
     <object>objects\o_battle_view</object>
+    <object>objects\o_parallax</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\r_init</room>
