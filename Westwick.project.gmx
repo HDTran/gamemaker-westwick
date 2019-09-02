@@ -263,6 +263,8 @@
     <script>scripts\battle_set_sprite.gml</script>
     <script>scripts\get_frames.gml</script>
     <script>scripts\get_image_speed_from_frames.gml</script>
+    <script>scripts\format_text.gml</script>
+    <script>scripts\get_visible_text.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">
@@ -301,6 +303,9 @@
       <object>objects\o_stump</object>
       <object>objects\o_decoration_parent</object>
       <object>objects\o_rock</object>
+    </objects>
+    <objects name="UI">
+      <object>objects\o_dialog</object>
     </objects>
   </objects>
   <rooms name="rooms">
