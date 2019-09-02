@@ -221,35 +221,47 @@
     <scripts name="Sprite Scripts">
       <script>scripts\animation_end.gml</script>
       <script>scripts\animation_hit_frame.gml</script>
+      <script>scripts\change_sprites.gml</script>
     </scripts>
-    <script>scripts\move.gml</script>
-    <script>scripts\get_facing.gml</script>
-    <script>scripts\get_input.gml</script>
-    <script>scripts\elizabeth_move_state.gml</script>
-    <script>scripts\view_follow_elizabeth_state.gml</script>
-    <script>scripts\set_tile_depth.gml</script>
-    <script>scripts\elizabeth_wait_state.gml</script>
-    <script>scripts\get_class_data.gml</script>
-    <script>scripts\calculate_health.gml</script>
-    <script>scripts\get_stats_from_class.gml</script>
-    <script>scripts\encounter.gml</script>
-    <script>scripts\view_approach.gml</script>
-    <script>scripts\view_screenshake.gml</script>
     <scripts name="Battle Scripts">
       <scripts name="Battle View State Scripts">
         <script>scripts\battle_view_intro_state.gml</script>
         <script>scripts\battle_view_idle_state.gml</script>
         <script>scripts\battle_view_focus_state.gml</script>
       </scripts>
+      <script>scripts\init_battle_unit.gml</script>
+      <script>scripts\deal_damage.gml</script>
+      <scripts name="Battle Unit Scripts">
+        <scripts name="Battle Unit State Scripts">
+          <script>scripts\battle_idle_state.gml</script>
+          <script>scripts\battle_action_state.gml</script>
+          <script>scripts\battle_approach_state.gml</script>
+          <script>scripts\battle_attack_state.gml</script>
+          <script>scripts\battle_return_state.gml</script>
+        </scripts>
+        <script>scripts\calculate_health.gml</script>
+        <script>scripts\get_stats_from_class.gml</script>
+      </scripts>
     </scripts>
-    <script>scripts\init_battle_unit.gml</script>
+    <scripts name="Character Scripts">
+      <script>scripts\get_facing.gml</script>
+      <script>scripts\get_input.gml</script>
+      <script>scripts\elizabeth_wait_state.gml</script>
+      <script>scripts\elizabeth_move_state.gml</script>
+      <script>scripts\encounter.gml</script>
+      <script>scripts\move.gml</script>
+    </scripts>
+    <scripts name="View Scripts">
+      <script>scripts\view_screenshake.gml</script>
+      <script>scripts\view_approach.gml</script>
+    </scripts>
+    <script>scripts\view_follow_elizabeth_state.gml</script>
+    <script>scripts\set_tile_depth.gml</script>
+    <script>scripts\get_class_data.gml</script>
     <script>scripts\draw_bar.gml</script>
-    <script>scripts\battle_idle_state.gml</script>
-    <script>scripts\battle_action_state.gml</script>
-    <script>scripts\battle_approach_state.gml</script>
-    <script>scripts\battle_attack_state.gml</script>
-    <script>scripts\deal_damage.gml</script>
-    <script>scripts\battle_return_state.gml</script>
+    <script>scripts\battle_set_sprite.gml</script>
+    <script>scripts\get_frames.gml</script>
+    <script>scripts\get_image_speed_from_frames.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">

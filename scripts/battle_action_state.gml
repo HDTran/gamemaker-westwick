@@ -1,4 +1,6 @@
 /// battle_action_state();
+battle_set_sprite(IDLE, 0);
+
 // unit taking action is drawn on top
 depth = -1;
 
