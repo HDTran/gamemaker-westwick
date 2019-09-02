@@ -242,6 +242,7 @@
         <script>scripts\battle_view_focus_state.gml</script>
       </scripts>
     </scripts>
+    <script>scripts\init_battle_unit.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">
@@ -260,6 +261,7 @@
       <objects name="Battle Unit">
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
+        <object>objects\o_battle_unit</object>
       </objects>
     </objects>
     <objects name="Misc">

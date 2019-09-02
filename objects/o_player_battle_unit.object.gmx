@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>o_battle_unit</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -26,7 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>/// create the player battle object
-image_speed = .2;
+event_inherited();
+
+init_battle_unit("elizabeth", o_player_stats.level, false, .2, .36, .2, .36);
 </string>
           </argument>
         </arguments>
