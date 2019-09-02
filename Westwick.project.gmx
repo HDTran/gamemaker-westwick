@@ -259,9 +259,9 @@
       <object>objects\o_battle</object>
       <object>objects\o_parallax</object>
       <objects name="Battle Unit">
+        <object>objects\o_battle_unit</object>
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
-        <object>objects\o_battle_unit</object>
       </objects>
     </objects>
     <objects name="Misc">

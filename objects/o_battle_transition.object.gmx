@@ -67,6 +67,10 @@ if (orange_alpha &gt; target_orange_alpha) {
 // go to battle room
 if (room != r_battle) {
     if (abs(target_white_alpha - white_alpha) &lt;= .2) {
+        // remember the previous room's state
+        room_persistent = true; 
+        o_game.last_room = room;
+        
         room_goto(r_battle);
     }
 } else {

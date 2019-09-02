@@ -135,6 +135,10 @@ last_room = room;
 // set elizabeth back to correct state
 if (state == elizabeth_wait_state) {
     state = elizabeth_move_state;
+    
+    // needed for leaving battle because of persistence
+    room_persistent = false;
+    persistent = true;
 }
 
 // create the view

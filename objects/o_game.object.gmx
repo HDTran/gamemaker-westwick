@@ -37,6 +37,9 @@ draw_set_font(global.custom_font);
 
 // go to the next room
 room_goto_next();
+
+// create last room variable
+last_room = r_town;
 </string>
           </argument>
         </arguments>
