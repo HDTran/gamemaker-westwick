@@ -249,6 +249,7 @@
     <script>scripts\battle_approach_state.gml</script>
     <script>scripts\battle_attack_state.gml</script>
     <script>scripts\deal_damage.gml</script>
+    <script>scripts\battle_return_state.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">
