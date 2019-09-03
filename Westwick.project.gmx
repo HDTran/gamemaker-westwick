@@ -285,7 +285,6 @@
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
       </objects>
-      <object>objects\o_battle_unit_ui</object>
     </objects>
     <objects name="Misc">
       <object>objects\o_solid</object>
@@ -306,6 +305,7 @@
     </objects>
     <objects name="UI">
       <object>objects\o_dialog</object>
+      <object>objects\o_battle_unit_ui</object>
     </objects>
   </objects>
   <rooms name="rooms">

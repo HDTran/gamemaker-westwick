@@ -43,7 +43,7 @@ enabled = true; // allow going through pages
 
 // position
 pos_x = 42;
-pos_y = (display_getgui_height() - sprite_height - 4);
+pos_y = (display_get_gui_height() - sprite_height - 4);
 </string>
           </argument>
         </arguments>
@@ -72,6 +72,53 @@ pos_y = (display_getgui_height() - sprite_height - 4);
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// manage the text to be drawn on the screen
+get_visible_text(room_speed/3);
+
+// handle input
+if (o_input.action) {
+    // get the text length
+    var text_length = string_length(text[text_page]);
+    
+    // are we at the end
+    if (text_count &gt; text_length) {
+        // go to the next page and reset state
+        text_page++;
+        text_count = 0;
+        text_visible = "";
+        if (text_page &gt; array_length_1d(text)-1) {
+            if (cutscene != noone) {
+                cutscene.action++;
+            }
+            instance_destroy();
+        }
+    } else {
+        // advance the count to the end of the text
+        text_count = text_length;
+    }
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
@@ -92,6 +139,53 @@ pos_y = (display_getgui_height() - sprite_height - 4);
             <string>/// format the text
 if (text != undefined) {
     format_text(text, (width-(margin*2))-12, global.custom_font);
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// draw the dialog
+// draw the dialog shadow
+draw_background_ext(b_dialogue_shadow, 0, 0, 1, 1, 0, c_white, .5);
+
+// draw the frame
+draw_sprite(sprite_index, 0, pos_x, pos_y);
+
+// draw the portrait
+draw_sprite(portrait, 0, portrait_x-1, portrait_y);
+draw_sprite(s_portrait_frame, 0, portrait_x-4, portrait_y-4);
+
+// set the font
+draw_set_font(global.custom_font);
+draw_set_halign(fa_left);
+
+// draw the text shadow
+draw_text_ext_color(pos_x+margin+3, pos_y+margin+3, text_visible, -1, width-margin*2, c_black, c_black, c_black, c_black, 1);
+
+// draw the text
+draw_text_ext_color(pos_x+margin+2, pos_y+margin+2, text_visible, -1, width-margin*2, c_white, c_white, c_white, c_white, 1);
+
+// add to the count
+if (alarm[0] &lt;= 0) {
+    text_count += spd;
 }
 </string>
           </argument>

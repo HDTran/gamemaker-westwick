@@ -64,6 +64,7 @@
     <instance objName="o_start_position" x="216" y="8" name="inst_796BBCCA" locked="0" code="last_room = r_north_meadow;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_solid" x="192" y="-16" name="inst_063D3365" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_solid" x="240" y="-16" name="inst_0E0F2BCD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_dialog" x="360" y="64" name="inst_3B44C7B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="b_dirt" x="288" y="112" w="16" h="16" xo="16" yo="32" id="10000097" name="inst_ADAF3042" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
