@@ -318,6 +318,7 @@
       <object>objects\o_ui_parent</object>
       <object>objects\o_option_list_ui_parent</object>
       <object>objects\o_option_list_ui</object>
+      <object>objects\o_scroll_option_list_ui</object>
       <object>objects\o_menu_ui</object>
     </objects>
   </objects>
