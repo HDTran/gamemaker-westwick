@@ -6,6 +6,14 @@ var vspd = (o_input.down - o_input.up) * spd;
 // move
 move(hspd, vspd);
 
+// check for the menu
+if (o_input.back) {
+    if (!instance_exists(o_menu_ui)) {
+        instance_create(16, 16, o_menu_ui);
+        exit;
+    }
+}
+
 // check for random encounter
 if (!instance_exists(o_last_encounter)) {
     instance_create(x, y, o_last_encounter);
