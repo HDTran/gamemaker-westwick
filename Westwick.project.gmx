@@ -257,6 +257,14 @@
       <script>scripts\view_screenshake.gml</script>
       <script>scripts\view_approach.gml</script>
     </scripts>
+    <scripts name="UI Scripts">
+      <script>scripts\get_visible_text.gml</script>
+      <script>scripts\draw_nine_slice.gml</script>
+      <script>scripts\create_option.gml</script>
+      <script>scripts\format_text.gml</script>
+      <script>scripts\say_hi.gml</script>
+      <script>scripts\mark_option_list.gml</script>
+    </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
     <script>scripts\get_class_data.gml</script>
@@ -264,13 +272,6 @@
     <script>scripts\battle_set_sprite.gml</script>
     <script>scripts\get_frames.gml</script>
     <script>scripts\get_image_speed_from_frames.gml</script>
-    <scripts name="UI Scripts">
-      <script>scripts\get_visible_text.gml</script>
-      <script>scripts\draw_nine_slice.gml</script>
-      <script>scripts\create_option.gml</script>
-      <script>scripts\format_text.gml</script>
-      <script>scripts\say_hi.gml</script>
-    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Main">

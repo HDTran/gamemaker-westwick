@@ -36,6 +36,7 @@ options[| option_index++] = create_option("Items", say_hi);
 options[| option_index++] = create_option("Save", say_hi);
 options[| option_index++] = create_option("Load", say_hi);
 options[| option_index++] = create_option("Exit", say_hi);
+mark_option_list(options);
 </string>
           </argument>
         </arguments>
