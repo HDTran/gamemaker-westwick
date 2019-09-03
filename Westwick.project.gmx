@@ -251,6 +251,7 @@
       <script>scripts\encounter.gml</script>
       <script>scripts\move.gml</script>
       <script>scripts\activate_interactable_object.gml</script>
+      <script>scripts\elizabeth_talking_state.gml</script>
     </scripts>
     <scripts name="View Scripts">
       <script>scripts\view_screenshake.gml</script>
@@ -297,6 +298,7 @@
     </objects>
     <objects name="Characters">
       <object>objects\o_elizabeth</object>
+      <object>objects\o_adam</object>
     </objects>
     <objects name="Decorations">
       <object>objects\o_stump</object>
@@ -306,6 +308,7 @@
     <objects name="UI">
       <object>objects\o_dialog</object>
       <object>objects\o_battle_unit_ui</object>
+      <object>objects\o_speaker</object>
     </objects>
   </objects>
   <rooms name="rooms">
