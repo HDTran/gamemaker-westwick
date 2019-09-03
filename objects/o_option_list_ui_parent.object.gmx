@@ -4,8 +4,8 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <persistent>0</persistent>
+  <parentName>o_ui_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,27 +25,29 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the game object
-draw_set_color(c_white);
+            <string>/// init the options list
+event_inherited();
+index = 0;
+width = 64;
+height = 64;
 
-// set the gui layer size
-display_set_gui_size(view_wview[0], view_hview[0]);
+// create the options list
+options = ds_list_create();
 
-// font
-global.custom_font = font_add_sprite_ext(s_font, FONT_CHARS, 1, 1);
-draw_set_font(global.custom_font);
+// set the player to the wait state
+if (instance_exists(o_elizabeth)) {
+    o_elizabeth.state = elizabeth_wait_state;
+}
 
-// go to the next room
-room_goto_next();
+// color for non-highlighted text
+purple_gray = make_color_rgb(145, 145, 175);
 
-// create last room variable
-last_room = r_town;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -62,8 +64,49 @@ last_room = r_town;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create depth on tiles
-set_tile_depth(TREE_TILES, -64);
+            <string>/// destroy the options
+event_inherited();
+ds_list_destroy(options);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// navigate the options
+if (!enabled) {
+    exit;
+}
+
+index += o_input.down_pressed - o_input.up_pressed;
+index = clamp(index, 0, ds_list_size(options)-1); // make sure index stays inside the list
+
+// exit the option list
+if (o_input.back) {
+    instance_destroy();
+}
+
+// run the option
+if (o_input.action &amp;&amp; ds_list_size(options) &gt; 0) {
+    var option = options[| index];
+    script_execute(option[? "script"]);
+}
 </string>
           </argument>
         </arguments>
@@ -86,11 +129,8 @@ set_tile_depth(TREE_TILES, -64);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the vignette
-
-// draw the vignette
-draw_background_ext(b_vignette, 0, 0, 1, 1, 0, c_white, .6);
-
+            <string>/// draw the option list border and box
+draw_nine_slice(s_textbox, x, y, x+width, y+height);
 </string>
           </argument>
         </arguments>

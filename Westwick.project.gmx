@@ -266,6 +266,7 @@
     <script>scripts\get_image_speed_from_frames.gml</script>
     <script>scripts\format_text.gml</script>
     <script>scripts\get_visible_text.gml</script>
+    <script>scripts\draw_nine_slice.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="Main">
@@ -309,6 +310,8 @@
       <object>objects\o_dialog</object>
       <object>objects\o_battle_unit_ui</object>
       <object>objects\o_speaker</object>
+      <object>objects\o_ui_parent</object>
+      <object>objects\o_option_list_ui_parent</object>
     </objects>
   </objects>
   <rooms name="rooms">

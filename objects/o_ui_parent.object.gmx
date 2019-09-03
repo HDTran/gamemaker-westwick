@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,27 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the game object
-draw_set_color(c_white);
-
-// set the gui layer size
-display_set_gui_size(view_wview[0], view_hview[0]);
-
-// font
-global.custom_font = font_add_sprite_ext(s_font, FONT_CHARS, 1, 1);
-draw_set_font(global.custom_font);
-
-// go to the next room
-room_goto_next();
-
-// create last room variable
-last_room = r_town;
+            <string>/// init the base UI Object
+enabled = true;
+child = noone;
+parent = noone;
+depth = depth - 500;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -62,14 +52,32 @@ last_room = r_town;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create depth on tiles
-set_tile_depth(TREE_TILES, -64);
+            <string>/// destroy the child
+if (instance_exists(child)) {
+    with (child) {
+        instance_destroy();
+    }
+}
+
+// update the parent by re-enabling parent and destroying child
+if (instance_exists(parent)) {
+    parent.enabled = true;
+    parent.child = noone;
+    parent.visible = true;
+}
+
+// reactivate the player if we're the last UI Object
+if (instance_number(o_ui_parent) == 1) {
+    if (instance_exists(o_elizabeth)) {
+        o_elizabeth.state = elizabeth_move_state;
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="64">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -86,11 +94,7 @@ set_tile_depth(TREE_TILES, -64);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the vignette
-
-// draw the vignette
-draw_background_ext(b_vignette, 0, 0, 1, 1, 0, c_white, .6);
-
+            <string>/// override the draw event
 </string>
           </argument>
         </arguments>
