@@ -4,8 +4,8 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <persistent>0</persistent>
+  <parentName>o_option_list_ui_parent</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,27 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the game object
-draw_set_color(c_white);
+            <string>/// init the message UI
+event_inherited();
+width = 0;
+height = 0;
+cutscene = noone;
 
-// set the gui layer size
-display_set_gui_size(view_wview[0], view_hview[0]);
+// create the message
+message = "";
 
-// font
-global.custom_font = font_add_sprite_ext(s_font, FONT_CHARS, 1, 1);
-draw_set_font(global.custom_font);
-
-// go to the next room
-room_goto_next();
-
-// create last room variable
-last_room = r_town;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="6" enumb="50">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -62,13 +56,13 @@ last_room = r_town;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>create_message_at_view_center("This is a test.");
+            <string>/// used for temp. message
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="4">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -85,8 +79,15 @@ last_room = r_town;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create depth on tiles
-set_tile_depth(TREE_TILES, -64);
+            <string>/// close the message
+if (o_input.action || o_input.back || alarm[0] == 0) {
+    // don't let the input propagate
+    o_input.action = false;
+    o_input.back = false;
+    
+    if (cutscene) cutscene.action++;
+    instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -109,11 +110,14 @@ set_tile_depth(TREE_TILES, -64);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the vignette
+            <string>/// draw the message
+event_inherited();
 
-// draw the vignette
-draw_background_ext(b_vignette, 0, 0, 1, 1, 0, c_white, .6);
+// draw the textbox
+draw_nine_slice(s_textbox, x, y, x+width, y+height);
 
+// draw the message
+draw_text(x+6, y+7, message);
 </string>
           </argument>
         </arguments>

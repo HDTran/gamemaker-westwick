@@ -264,6 +264,8 @@
       <script>scripts\format_text.gml</script>
       <script>scripts\say_hi.gml</script>
       <script>scripts\mark_option_list.gml</script>
+      <script>scripts\create_message.gml</script>
+      <script>scripts\create_message_at_view_center.gml</script>
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
@@ -320,6 +322,7 @@
       <object>objects\o_option_list_ui</object>
       <object>objects\o_scroll_option_list_ui</object>
       <object>objects\o_menu_ui</object>
+      <object>objects\o_message_ui</object>
     </objects>
   </objects>
   <rooms name="rooms">
