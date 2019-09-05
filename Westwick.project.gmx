@@ -269,11 +269,19 @@
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
-    <script>scripts\get_class_data.gml</script>
     <script>scripts\draw_bar.gml</script>
     <script>scripts\battle_set_sprite.gml</script>
     <script>scripts\get_frames.gml</script>
     <script>scripts\get_image_speed_from_frames.gml</script>
+    <scripts name="Data Scripts">
+      <script>scripts\get_class_data.gml</script>
+      <script>scripts\get_item_data.gml</script>
+    </scripts>
+    <scripts name="Item Scripts">
+      <script>scripts\pickup_item.gml</script>
+      <script>scripts\drop_item_index.gml</script>
+      <script>scripts\use_item_index.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Main">
