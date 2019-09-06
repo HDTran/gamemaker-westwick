@@ -25,18 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the backgrounds
+            <string>/// Initialize the backgrounds
 
 var index = 0;
 
-// 8 for each background
 repeat (8) {
-    // get current position of background
     background_xstart[index] = background_x[index];
     index++;
 }
 
-// set the start position for background 7
+// Set the start position for background 7
 background_xstart[7] = 300;
 </string>
           </argument>
@@ -60,30 +58,28 @@ background_xstart[7] = 300;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update the background positions
-// get scales incase we need to zoom
+            <string>/// Update the background positions
 var xscale = view_wview[0]/(room_width/2);
-var yscale = view_hview[0]/(room_height/2);
+var yscale = view_hview[0]/room_height;
 
-// sky, follow the view since it's far
+// Sky
 background_x[0] = view_xview[0];
 background_y[0] = view_yview[0];
 background_xscale[0] = xscale;
 background_yscale[0] = yscale;
 
-// mountains
-// view's x position a little bit, plus where background was--only small lag
-background_x[1] = (view_xview[0]/1.25) + background_xstart[1];
-background_y[1] = (view_yview[0]/2.75);
+// Mountains
+background_x[1] = (view_xview[0]/1.25)+background_xstart[1];
+background_y[1] = view_yview[0]/2.75;
 
-// other backgrounds
-background_x[2] = (view_xview[0]/2) + background_xstart[2];
-background_x[3] = (view_xview[0]/2.75) + background_xstart[3];
-
-// foregrounds
+// Other backgrounds
+background_x[2] = (view_xview[0]/2)+background_xstart[2];
+background_x[3] = (view_xview[0]/2.75)+background_xstart[3];
 background_x[5] = background_xstart[5] - (view_xview[0]/2.75);
-background_x[6] = background_xstart[6] - (view_xview[0]);
+background_x[6] = background_xstart[6] - view_xview[0];
 background_x[7] = background_xstart[7] - (view_xview[0]/0.8);
+
+
 </string>
           </argument>
         </arguments>

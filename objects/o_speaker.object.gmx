@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the speaker object
+            <string>/// Initialize the speaker object
 depth = -y;
-dialog = noone; // store the object that we create when we show our dialog
-dialog_object = o_dialog; // could be dialog or cutscene
+dialog = noone;
+dialog_object = o_dialog; // Could be a cutscene
 dialog_page = 0;
 dialog_state = 0;
 
-// set the default portrait
-portrait = s_default_portrait;
-text[0] = "Empty.";
+// Set the default portrait
+portrat = s_default_portrait;
+text[0] = "Empty";
 </string>
           </argument>
         </arguments>
@@ -57,21 +57,17 @@ text[0] = "Empty.";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// activate the dialog
-// done with interactable parent override
+            <string>/// Activate the dialog
 if (!instance_exists(dialog)) {
     dialog = instance_create(0, 0, dialog_object);
     
-    // is it a dialog object
+    // Is it a dialog object?
     if (dialog.object_index == o_dialog) {
         dialog.text = text;
         dialog.portrait = portrait;
         
-        // format the text
-        with (dialog) {
-            event_user(FORMAT_TEXT);
-        }
-        // other is pulled from activate_interactable_object becauise this scriopt is nested in a with
+        // Format the text
+        with (dialog) event_user(FORMAT_TEXT);
         other.state = elizabeth_talking_state;
     }
 }

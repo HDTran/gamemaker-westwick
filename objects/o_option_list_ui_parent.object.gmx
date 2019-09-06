@@ -25,23 +25,22 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the options list
+            <string>/// Initialize the options list
 event_inherited();
 index = 0;
 width = 64;
 height = 64;
 
-// create the options list
+// Create the options list
 options = ds_list_create();
 
-// set the player to the wait state
+// Set the player to the wait state
 if (instance_exists(o_elizabeth)) {
     o_elizabeth.state = elizabeth_wait_state;
 }
 
-// color for non-highlighted text
-purple_gray = make_color_rgb(145, 145, 175);
-
+// Color for non highlighted text
+purple_gray = make_colour_rgb(145, 145, 175);
 </string>
           </argument>
         </arguments>
@@ -64,7 +63,7 @@ purple_gray = make_color_rgb(145, 145, 175);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// destroy the options
+            <string>/// Destroy the options list
 event_inherited();
 ds_list_destroy(options);
 </string>
@@ -89,20 +88,17 @@ ds_list_destroy(options);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// navigate the options
-if (!enabled) {
-    exit;
-}
-
+            <string>/// Navigate the options
+if (!enabled) exit;
 index += o_input.down_pressed - o_input.up_pressed;
-index = clamp(index, 0, ds_list_size(options)-1); // make sure index stays inside the list
+index = clamp(index, 0, ds_list_size(options)-1);
 
-// exit the option list
+// Exit the option list
 if (o_input.back) {
     instance_destroy();
 }
 
-// run the option
+// Run the option
 if (o_input.action &amp;&amp; ds_list_size(options) &gt; 0) {
     var option = options[| index];
     script_execute(option[? "script"]);
@@ -129,7 +125,7 @@ if (o_input.action &amp;&amp; ds_list_size(options) &gt; 0) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the option list border and box
+            <string>/// Draw the option list border and box
 draw_nine_slice(s_textbox, x, y, x+width, y+height);
 </string>
           </argument>

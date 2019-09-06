@@ -1,2 +1,2 @@
-/// say_hi()
+///say_hi()
 instance_destroy();

@@ -19,13 +19,13 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>other</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create the enemy battle object
+            <string>/// Create the player battle object
 event_inherited();
 
 init_battle_unit("spider", 1, true, .3, .4, .2, .4);

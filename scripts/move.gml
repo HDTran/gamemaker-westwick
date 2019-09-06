@@ -2,13 +2,13 @@
 var hspd = argument0;
 var vspd = argument1;
 
-// horizontal movement
-if (!place_meeting(x + hspd, y, o_solid)) {
+// Horizontal movement
+if (!place_meeting(x+hspd, y, o_solid)) {
     x += hspd;
 }
 
-// vertical movement
-if (!place_meeting(x, y + vspd, o_solid)) {
+// Vertical movement
+if (!place_meeting(x, y+vspd, o_solid)) {
     y += vspd;
 }
 
@@ -24,5 +24,5 @@ if (!moved) {
     facing = get_facing(dir);
 }
 
-// return true if able to move, otherwise false
+// Return true if we are able to move
 return moved;

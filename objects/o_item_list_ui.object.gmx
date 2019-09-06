@@ -25,12 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the item list UI
+            <string>/// Initialize the item list ui
 event_inherited();
 width = 96;
 height = 64;
 
-// create the options list
+// Create the options _list
 options = create_items_option_list();
 </string>
           </argument>

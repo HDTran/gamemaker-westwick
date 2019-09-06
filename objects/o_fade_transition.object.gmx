@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the transition
+            <string>/// Initialize the transition
 image_alpha = 0;
 target_image_alpha = 1;
 next_room = noone;
@@ -51,17 +51,17 @@ next_room = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// fade
+            <string>/// Fade
 if (image_alpha != target_image_alpha) {
-    // aproach target_image_alpha
+    // Approach the target image alpha
     image_alpha = approach(image_alpha, target_image_alpha, .2);
 } else {
     if (image_alpha == 1) {
-        // go to the next room
+        // Go to the next room
         target_image_alpha = 0;
         room_goto(next_room);
     } else {
-        // reset by destroying
+        // Destroy the transition object
         instance_destroy();
     }
 }
@@ -87,22 +87,22 @@ if (image_alpha != target_image_alpha) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the fade
+            <string>/// Draw the fade
 
-// draw the blue fade
+// Draw the blue fade
 draw_set_blend_mode(bm_add);
-draw_set_color(c_blue);
+draw_set_colour(c_blue);
 draw_set_alpha(image_alpha/2);
 draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
-// draw the black fade
+// Draw the black fade
 draw_set_blend_mode(bm_normal);
-draw_set_color(c_black);
+draw_set_colour(c_black);
 draw_set_alpha(image_alpha);
 draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
-// reset color and alpha
-draw_set_color(c_white);
+// Set back to normal drawing
+draw_set_colour(c_white);
 draw_set_alpha(1);
 </string>
           </argument>

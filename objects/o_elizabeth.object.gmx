@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Init the Elizabeth Object
+            <string>/// Initialize the Elizabeth object
 spd = 2;
 image_speed = 0;
 facing = RIGHT;
@@ -62,10 +62,10 @@ sprite[DOWN] = s_elizabeth_down;
             <string>/// Control the state
 script_execute(state);
 
-// set the depth
+// Set the depth
 depth = -y;
 
-// update the sprite
+// Update the sprite
 sprite_index = sprite[facing];
 </string>
           </argument>
@@ -89,7 +89,7 @@ sprite_index = sprite[facing];
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// go to the next room
+            <string>/// Go to the next room
 if (state != elizabeth_wait_state) {
     state = elizabeth_wait_state;
     var transition = instance_create(0, 0, o_fade_transition);
@@ -117,31 +117,28 @@ if (state != elizabeth_wait_state) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// move to the start position
+            <string>/// Move to start position
 if (instance_exists(o_start_position)) {
     with (o_start_position) {
-        // compare o_start_position's last_room with elizabeth's last_room
         if (last_room == other.last_room) {
-            // set elizabeth's position
             other.x = x;
             other.y = y;
         }
     }
 }
 
-// update the last room
+// Update the last room
 last_room = room;
 
-// set elizabeth back to correct state
+// Set the player's state
 if (state == elizabeth_wait_state) {
     state = elizabeth_move_state;
-    
-    // needed for leaving battle because of persistence
     room_persistent = false;
     persistent = true;
 }
 
-// create the view
+
+// Create the view
 if (!instance_exists(o_view)) {
     instance_create(x+8, y+8, o_view);
 }

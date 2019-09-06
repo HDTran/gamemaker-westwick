@@ -25,9 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the interactable parent
+            <string>/// Initialize the interactable parent
 depth = -y;
-
 </string>
           </argument>
         </arguments>
@@ -50,8 +49,7 @@ depth = -y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// this event handles the interaction
-
+            <string>/// This event handles the interaction
 </string>
           </argument>
         </arguments>

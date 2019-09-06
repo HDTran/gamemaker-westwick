@@ -25,16 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Init the view parent
-// create the target
+            <string>/// Initialize the view parent
+// Create the target
 target = ds_map_create();
 target[? "x"] = 0;
 target[? "y"] = 0;
 
-// create screenshake
+// Create screenshake
 screenshake = 0;
 
-// speed
+// Speed
 spd = .1;
 </string>
           </argument>
@@ -58,8 +58,8 @@ spd = .1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// destroy the target
-ds_map_destroy(target); // we need to cleanup ds map, otherwise memory leak
+            <string>/// Destroy the target
+ds_map_destroy(target);
 </string>
           </argument>
         </arguments>
@@ -82,7 +82,7 @@ ds_map_destroy(target); // we need to cleanup ds map, otherwise memory leak
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// set screenshake to 0
+            <string>/// Set screenshake to 0
 screenshake = 0;
 </string>
           </argument>
@@ -106,14 +106,13 @@ screenshake = 0;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update the view position
-view_xview[0] = (x-view_wview[0]/2) + irandom_range(-screenshake, screenshake);
-view_yview[0] = (y-view_hview[0]/2) + irandom_range(-screenshake, screenshake);
+            <string>/// Update the view position
+view_xview[0] = (x-view_wview[0]/2)+irandom_range(-screenshake, screenshake);
+view_yview[0] = (y-view_hview[0]/2)+irandom_range(-screenshake, screenshake);
 
-// move the view towards the target point
+// Move the view towards the target point
 x = lerp(x, target[? "x"], spd);
 y = lerp(y, target[? "y"], spd);
-
 </string>
           </argument>
         </arguments>

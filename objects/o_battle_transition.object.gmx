@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle transition
+            <string>/// Initialize the battle transition
 white_alpha = 0;
 orange_alpha = 0;
 
@@ -53,29 +53,26 @@ target_orange_alpha = 1;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// fade
+            <string>/// Fade
 white_alpha = lerp(white_alpha, target_white_alpha, .2);
-
 if (orange_alpha &gt; target_orange_alpha) {
-    // fade in
+    // Fade in
     orange_alpha = lerp(orange_alpha, target_orange_alpha, .075);
 } else {
-    // fade out
+    // Fade out
     orange_alpha = lerp(orange_alpha, target_orange_alpha, .2);
 }
 
-// go to battle room
+// Go to battle room
 if (room != r_battle) {
-    if (abs(target_white_alpha - white_alpha) &lt;= .2) {
-        // remember the previous room's state
-        room_persistent = true; 
-        o_game.last_room = room;
-        
+    if (abs(target_white_alpha-white_alpha) &lt;= .2) {
+        room_persistent = true;
         room_goto(r_battle);
+        o_game.last_room = room;
     }
 } else {
-    // destroy transition because already here
-    if (abs(target_white_alpha - white_alpha) &lt;= .01) {
+    // Destroy the transition
+    if (abs(target_white_alpha-white_alpha) &lt;= .01) {
         instance_destroy();
     }
 }
@@ -101,7 +98,7 @@ if (room != r_battle) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// handle alphas for new room
+            <string>/// Handle alphas for new room
 if (room == r_battle) {
     white_alpha = 1;
     orange_alpha = 1;
@@ -130,23 +127,23 @@ if (room == r_battle) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the fade
+            <string>/// Draw the fade
 
-// set the blend mode
+// Set the blend mode
 draw_set_blend_mode(bm_add);
 
-// draw the orange flash
-draw_set_color(c_orange);
+// Draw the orange flash
+draw_set_colour(c_orange);
 draw_set_alpha(orange_alpha);
 draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
-// draw the white fade
-draw_set_color(c_white);
+// Draw the white fade
+draw_set_colour(c_white);
 draw_set_alpha(white_alpha);
 draw_rectangle(0, 0, display_get_gui_width(), display_get_gui_height(), false);
 
-// reset color and alpha
-draw_set_color(c_white);
+// Set back to normal drawing
+draw_set_colour(c_white);
 draw_set_alpha(1);
 draw_set_blend_mode(bm_normal);
 </string>

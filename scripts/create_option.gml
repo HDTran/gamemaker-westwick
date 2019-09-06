@@ -1,8 +1,8 @@
-/// create_option(text, script)
+///create_option(text, script)
 var text = argument0;
 var script = argument1;
 
-// create the option map
+// Create the option map
 var option = ds_map_create();
 option[? "text"] = text;
 option[? "script"] = script;

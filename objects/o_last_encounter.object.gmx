@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the last encounter object
+            <string>/// Initialize the last encounter object
 distance = 0;
 </string>
           </argument>

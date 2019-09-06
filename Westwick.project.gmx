@@ -267,6 +267,15 @@
       <script>scripts\create_message.gml</script>
       <script>scripts\create_message_at_view_center.gml</script>
       <script>scripts\create_items_option_list.gml</script>
+      <scripts name="Item Option Scripts">
+        <script>scripts\item_option_use_ui.gml</script>
+        <script>scripts\item_option_drop.gml</script>
+        <script>scripts\item_option_use.gml</script>
+        <script>scripts\item_option_info.gml</script>
+      </scripts>
+      <scripts name="Menu Option Scripts">
+        <script>scripts\menu_option_items.gml</script>
+      </scripts>
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
@@ -333,6 +342,7 @@
       <object>objects\o_menu_ui</object>
       <object>objects\o_message_ui</object>
       <object>objects\o_item_list_ui</object>
+      <object>objects\o_item_use_ui</object>
     </objects>
   </objects>
   <rooms name="rooms">

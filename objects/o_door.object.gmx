@@ -3,7 +3,7 @@
   <spriteName>s_door</spriteName>
   <solid>0</solid>
   <visible>0</visible>
-  <depth>-99999999</depth>
+  <depth>-9999999</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>next_room = r_town; // default if we forget to assign
+            <string>next_room = r_town;
 </string>
           </argument>
         </arguments>

@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the base UI Object
+            <string>/// Initialize the base UI object
 enabled = true;
 child = noone;
 parent = noone;
-depth = depth - 500;
+depth = depth-500;
 </string>
           </argument>
         </arguments>
@@ -52,21 +52,19 @@ depth = depth - 500;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// destroy the child
+            <string>/// Destroy the child
 if (instance_exists(child)) {
-    with (child) {
-        instance_destroy();
-    }
+    with (child) instance_destroy();
 }
 
-// update the parent by re-enabling parent and destroying child
+// Update the parent
 if (instance_exists(parent)) {
     parent.enabled = true;
     parent.child = noone;
     parent.visible = true;
 }
 
-// reactivate the player if we're the last UI Object
+// Reactivate the player
 if (instance_number(o_ui_parent) == 1) {
     if (instance_exists(o_elizabeth)) {
         o_elizabeth.state = elizabeth_move_state;
@@ -94,7 +92,7 @@ if (instance_number(o_ui_parent) == 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// override the draw event
+            <string>/// Override the draw event
 </string>
           </argument>
         </arguments>

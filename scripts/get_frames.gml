@@ -1,4 +1,4 @@
-/// get_frames(x1, x2, speed);
+///get_frames(x1, x2, speed);
 var x1 = argument0;
 var x2 = argument1;
 var spd = argument2;

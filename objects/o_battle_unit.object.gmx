@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle unit
+            <string>/// Initialize the battle unit
 action_meter = 0;
 max_action_meter = 100;
 item_index = 0;
 
-// set up the state
+// Set up the state
 state = battle_idle_state;
 
-// create the battle unit ui
+// Create the battle unit ui
 var unit_ui = instance_create(xstart, 16, o_battle_unit_ui);
 unit_ui.unit = id;
 unit_ui.x -= unit_ui.sprite_width/2;
@@ -59,17 +59,17 @@ unit_ui.x -= unit_ui.sprite_width/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// check to see if we are an enemy
+            <string>/// Check to see if we are an enemy
 if (object_index == o_enemy_battle_unit) {
-    // go to the last room
+    // Go to the last room
     var transition = instance_create(0, 0, o_fade_transition);
     transition.next_room = o_game.last_room;
     
-    // destroy the stats map
+    // Destroy the stats map
     ds_map_destroy(stats);
 }
 
-// stop the play and view states
+// Stop the play and view stats
 o_battle.play = false;
 o_battle_view.state = battle_view_idle_state;
 </string>
@@ -94,7 +94,7 @@ o_battle_view.state = battle_view_idle_state;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update the draw health
+            <string>/// Update the draw health
 with (stats_object) {
     var dis = draw_health - stats[? "health"];
     if (dis &gt; 1) {
@@ -125,7 +125,7 @@ with (stats_object) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// execute the state
+            <string>/// Execute the state
 script_execute(state);
 </string>
           </argument>

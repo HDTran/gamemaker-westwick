@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// load the data
+            <string>/// Load the data
 classes = get_class_data();
 items = get_item_data();
 </string>
@@ -50,7 +50,7 @@ items = get_item_data();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// cleanup to prevent memory leaks
+            <string>/// Destroy the ds maps
 ds_map_destroy(classes);
 ds_map_destroy(items);
 </string>

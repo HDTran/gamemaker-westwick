@@ -25,19 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init Adam
+            <string>/// Initailize Adam
 event_inherited();
 image_speed = 0;
 
-// set the dialog object
+// Set the dialog object
 dialog_object = o_dialog;
 
-// portrait
+// Portrait
 portrait = s_adam_portrait;
 
-// dialog
-text[0] = "Hey Elizabeth!";
-text[1] = "How are you today?";
+// Dialog
+var i = 0;
+text[i++] = "Hey Elizabeth!";
+text[i++] = "How are you today?";
 </string>
           </argument>
         </arguments>

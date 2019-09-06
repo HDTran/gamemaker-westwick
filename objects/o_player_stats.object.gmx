@@ -25,21 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init player stats
+            <string>/// Initialize the player's states
 level = 2;
 class = o_data.classes[? "elizabeth"];
 
-// get the stats from the class
+// Get the stats from the class
 stats = get_stats_from_class("elizabeth");
 draw_health = stats[? "health"];
 
-// items list
+// Items list
 items = ds_list_create();
 item_number = ds_list_create();
+pickup_item(o_data.items[? "potion"], 4);
 
-// action list
+// Action list
 actions = ds_list_create();
-
 </string>
           </argument>
         </arguments>
@@ -62,7 +62,7 @@ actions = ds_list_create();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// cleanup lists, otherwise memory leak
+            <string>/// Destroy the lists and the stats map
 ds_list_destroy(items);
 ds_list_destroy(item_number);
 ds_list_destroy(actions);
@@ -89,7 +89,7 @@ ds_map_destroy(stats);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update the draw health
+            <string>/// Update the draw health
 var dis = draw_health - stats[? "health"];
 if (dis &gt; 1) {
     draw_health = lerp(draw_health, stats[? "health"], .1);
@@ -118,21 +118,21 @@ if (dis &gt; 1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// update the stats for death and level up
+            <string>/// Update the stats for death and level-up
 
-// check for death
+// Check for death
 if (draw_health &lt;= 0) {
-   room_goto(r_game_over);
+    room_goto(r_game_over);
 }
 
-// check for level up
+// Check for level-up
 if (stats[? "experience"] &gt;= stats[? "maxexperience"]) {
-   // update the stats
-   level++;
-   stats[? "experience"] = stats[? "experience"]-stats[? "maxexperience"]; // keep leftover exp
-   stats[? "maxexperience"] = level*10;
-   stats[? "health"] = calculate_health(level, class[? "health"]);
-   stats[? "maxhealth"] = stats[? "health"];
+    // Update the stats
+    level++;
+    stats[? "experience"] = stats[? "experience"]-stats[? "maxexperience"];
+    stats[? "maxexperience"] = level*10;
+    stats[? "health"] = calculate_health(level, class[? "health"]);
+    stats[? "maxhealth"] = stats[? "health"];
 }
 </string>
           </argument>

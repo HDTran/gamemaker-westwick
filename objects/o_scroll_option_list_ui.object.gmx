@@ -25,26 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the option list
+            <string>/// Draw the option list
 event_inherited();
 
-// draw the options list
-for (var i = index-2; i &lt;= index+2; i++) {
+// Draw the options list
+for (var i=index-2; i&lt;=index+2; i++) {
     if (i &gt;= 0 &amp;&amp; i &lt; ds_list_size(options)) {
         var option = options[| i];
-    
-        // standard color
         var color = purple_gray;
-        // currently selected option color
-        if (i == index) {
-            color = c_white;
-        }
-        draw_text_color(x+16, y+6+(10*(i+2-index)), option[? "text"], color, color, color, color, 1);
+        if (i == index) color = c_white;
+        draw_text_colour(x+16, y+6+10*(i+2-index), option[? "text"], color, color, color, color, 1);
     }
 }
 
-// draw the caret for the option selection
-draw_sprite(s_ui_caret, 0, x+6, y+6+(10*2));
+// Draw the caret for the option selection
+draw_sprite(s_ui_caret, 0, x+6, y+6+10*2);
 </string>
           </argument>
         </arguments>

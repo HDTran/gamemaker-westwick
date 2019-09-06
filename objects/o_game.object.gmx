@@ -25,20 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the game object
-draw_set_color(c_white);
+            <string>/// Initialize the game object
+draw_set_colour(c_white);
 
-// set the gui layer size
+// Set the GUI layer size
 display_set_gui_size(view_wview[0], view_hview[0]);
 
-// font
+// Font
 global.custom_font = font_add_sprite_ext(s_font, FONT_CHARS, 1, 1);
 draw_set_font(global.custom_font);
 
-// go to the next room
+// Go to the next room
 room_goto_next();
 
-// create last room variable
+// Create the last room variable
 last_room = r_town;
 </string>
           </argument>
@@ -62,7 +62,7 @@ last_room = r_town;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// create depth on tiles
+            <string>/// Create depth on tiles
 set_tile_depth(TREE_TILES, -64);
 </string>
           </argument>
@@ -86,11 +86,10 @@ set_tile_depth(TREE_TILES, -64);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the vignette
+            <string>/// Draw the vignette
 
-// draw the vignette
+// Draw the vignette
 draw_background_ext(b_vignette, 0, 0, 1, 1, 0, c_white, .6);
-
 </string>
           </argument>
         </arguments>

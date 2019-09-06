@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle character ui
+            <string>/// Initialize the battle character ui
 unit = noone;
 </string>
           </argument>
@@ -49,20 +49,20 @@ unit = noone;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the unit information
+            <string>/// Draw the unit information
 if (!instance_exists(unit)) {
     instance_destroy();
     exit;
 }
 
-// draw self (the bar)
+// Draw self
 draw_self();
 
-//  draw the action meter and health
+// Draw the action meter and health
 draw_bar(x+3, y+8, s_action_meter, unit.action_meter, unit.max_action_meter);
 draw_bar(x+3, y+4, s_health_bar, unit.stats_object.draw_health, unit.stats_object.stats[? "maxhealth"]);
 
-// draw the text
+// Draw the text
 draw_text(x+3, y+15, "Level");
 draw_set_halign(fa_right);
 draw_text(x+sprite_width-14, y+15, string(unit.stats_object.level));

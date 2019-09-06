@@ -1,7 +1,7 @@
-/// battle_attack_state();
+///battle_attack_state()
 battle_set_sprite(ATTACK, 0);
 
-// hit only on certain frame
+// Hit
 if (animation_hit_frame(1)) {
     var foe = instance_place(x+32*image_xscale, y, o_battle_unit);
     if (foe) {
@@ -9,7 +9,7 @@ if (animation_hit_frame(1)) {
     }
 }
 
-// return state
+// Return
 if (animation_end()) {
     state = battle_return_state;
 }

@@ -25,17 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the view
+            <string>/// Initialize the view
 event_inherited();
 
-// set the view state
+// Set the view state
 state = view_follow_elizabeth_state;
 
-// update the target point
+// Update the target point
 target[? "x"] = x;
 target[? "y"] = y;
 
-// move the view
+// Move the view
 view_xview[0] = x-view_wview[0]/2;
 view_yview[0] = y-view_hview[0]/2;
 </string>
@@ -60,7 +60,7 @@ view_yview[0] = y-view_hview[0]/2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// run the view state
+            <string>/// Run the view state
 script_execute(state);
 </string>
           </argument>
@@ -84,7 +84,7 @@ script_execute(state);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// destroy the view
+            <string>/// Destroy the view
 instance_destroy();
 </string>
           </argument>

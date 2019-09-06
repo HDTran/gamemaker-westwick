@@ -1,4 +1,4 @@
-/// view_screenshake(amount, duration)
+///view_screenshake(amount, duration)
 var amount = argument0;
 var duration = argument1;
 

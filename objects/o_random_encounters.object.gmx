@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init random encounters
+            <string>/// Initialize random encounters
 on = true;
 </string>
           </argument>

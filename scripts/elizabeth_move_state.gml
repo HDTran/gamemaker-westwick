@@ -1,12 +1,12 @@
 ///elizabeth_move_state()
-/// movement
-var hspd = (o_input.right - o_input.left) * spd;
-var vspd = (o_input.down - o_input.up) * spd;
+// Movement
+var hspd = (o_input.right - o_input.left)*spd;
+var vspd = (o_input.down - o_input.up)*spd;
 
-// move
+// Move
 move(hspd, vspd);
 
-// check for the menu
+// Check for menu
 if (o_input.back) {
     if (!instance_exists(o_menu_ui)) {
         instance_create(16, 16, o_menu_ui);
@@ -14,7 +14,7 @@ if (o_input.back) {
     }
 }
 
-// check for random encounter
+// Check for a random encounter
 if (!instance_exists(o_last_encounter)) {
     instance_create(x, y, o_last_encounter);
     o_last_encounter.distance = random_range(32, room_width/2);
@@ -27,9 +27,12 @@ if (!instance_exists(o_last_encounter)) {
     }
 }
 
-// get the direction we are facing
+// Get the direction we are facing
 var xdir = lengthdir_x(8, facing*90);
 var ydir = lengthdir_y(8, facing*90);
 
-// check for the interactable object
+// Check for the interactable object
 activate_interactable_object(xdir, ydir);
+
+
+

@@ -25,11 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle camera
+            <string>/// Initialize the battle camera
 event_inherited();
 spd = .1;
-x = 256; // starting x
-y = room_height/2; // starting y
+x = 256;
+y = room_height/2;
 state = battle_view_intro_state;
 </string>
           </argument>
@@ -53,7 +53,7 @@ state = battle_view_intro_state;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// execute the state
+            <string>/// Execute the state
 event_inherited();
 script_execute(state);
 </string>
