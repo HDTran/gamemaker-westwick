@@ -5,4 +5,3 @@ depth = -1;
 if (object_index == o_enemy_battle_unit) {
     state = battle_approach_state;
 }
-

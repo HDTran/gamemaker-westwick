@@ -229,8 +229,6 @@
         <script>scripts\battle_view_idle_state.gml</script>
         <script>scripts\battle_view_focus_state.gml</script>
       </scripts>
-      <script>scripts\init_battle_unit.gml</script>
-      <script>scripts\deal_damage.gml</script>
       <scripts name="Battle Unit Scripts">
         <scripts name="Battle Unit State Scripts">
           <script>scripts\battle_idle_state.gml</script>
@@ -240,24 +238,44 @@
           <script>scripts\battle_return_state.gml</script>
           <script>scripts\battle_use_item_state.gml</script>
         </scripts>
-        <script>scripts\calculate_health.gml</script>
         <script>scripts\get_stats_from_class.gml</script>
+        <script>scripts\calculate_health.gml</script>
       </scripts>
+      <script>scripts\init_battle_unit.gml</script>
+      <script>scripts\deal_damage.gml</script>
     </scripts>
     <scripts name="Character Scripts">
+      <script>scripts\move.gml</script>
       <script>scripts\get_facing.gml</script>
       <script>scripts\get_input.gml</script>
-      <script>scripts\elizabeth_wait_state.gml</script>
       <script>scripts\elizabeth_move_state.gml</script>
+      <script>scripts\elizabeth_wait_state.gml</script>
       <script>scripts\encounter.gml</script>
-      <script>scripts\move.gml</script>
       <script>scripts\activate_interactable_object.gml</script>
       <script>scripts\elizabeth_talking_state.gml</script>
     </scripts>
+    <script>scripts\view_follow_elizabeth_state.gml</script>
     <scripts name="View Scripts">
-      <script>scripts\view_screenshake.gml</script>
       <script>scripts\view_approach.gml</script>
+      <script>scripts\view_screenshake.gml</script>
     </scripts>
+    <script>scripts\set_tile_depth.gml</script>
+    <scripts name="Data Scripts">
+      <script>scripts\get_class_data.gml</script>
+      <script>scripts\get_item_data.gml</script>
+    </scripts>
+    <script>scripts\draw_bar.gml</script>
+    <script>scripts\battle_set_sprite.gml</script>
+    <scripts name="Item Scripts">
+      <script>scripts\pickup_item.gml</script>
+      <script>scripts\drop_item_index.gml</script>
+      <script>scripts\use_item_index.gml</script>
+      <scripts name="Item Effect Scripts">
+        <script>scripts\heal_effect.gml</script>
+      </scripts>
+    </scripts>
+    <script>scripts\get_frames.gml</script>
+    <script>scripts\get_image_speed_from_frames.gml</script>
     <scripts name="UI Scripts">
       <script>scripts\format_text.gml</script>
       <script>scripts\get_visible_text.gml</script>
@@ -278,44 +296,15 @@
       <script>scripts\create_message_at_view_center.gml</script>
       <script>scripts\create_items_option_list.gml</script>
     </scripts>
-    <script>scripts\view_follow_elizabeth_state.gml</script>
-    <script>scripts\set_tile_depth.gml</script>
-    <script>scripts\draw_bar.gml</script>
-    <script>scripts\battle_set_sprite.gml</script>
-    <script>scripts\get_frames.gml</script>
-    <script>scripts\get_image_speed_from_frames.gml</script>
-    <scripts name="Data Scripts">
-      <script>scripts\get_class_data.gml</script>
-      <script>scripts\get_item_data.gml</script>
-    </scripts>
-    <scripts name="Item Scripts">
-      <scripts name="Item Effect Scripts">
-        <script>scripts\heal_effect.gml</script>
-      </scripts>
-      <script>scripts\pickup_item.gml</script>
-      <script>scripts\drop_item_index.gml</script>
-      <script>scripts\use_item_index.gml</script>
-    </scripts>
   </scripts>
   <objects name="objects">
     <objects name="Main">
-      <object>objects\o_view_parent</object>
       <object>objects\o_game</object>
       <object>objects\o_input</object>
-      <object>objects\o_view</object>
-      <object>objects\o_data</object>
       <object>objects\o_player_stats</object>
-    </objects>
-    <objects name="Battle">
-      <object>objects\o_battle_transition</object>
-      <object>objects\o_battle_view</object>
-      <object>objects\o_battle</object>
-      <object>objects\o_parallax</object>
-      <objects name="Battle Unit">
-        <object>objects\o_battle_unit</object>
-        <object>objects\o_player_battle_unit</object>
-        <object>objects\o_enemy_battle_unit</object>
-      </objects>
+      <object>objects\o_data</object>
+      <object>objects\o_view_parent</object>
+      <object>objects\o_view</object>
     </objects>
     <objects name="Misc">
       <object>objects\o_solid</object>
@@ -326,16 +315,28 @@
       <object>objects\o_last_encounter</object>
       <object>objects\o_interactable_parent</object>
     </objects>
+    <objects name="Battle">
+      <object>objects\o_battle_transition</object>
+      <object>objects\o_battle_view</object>
+      <object>objects\o_battle</object>
+      <object>objects\o_parallax</object>
+      <objects name="Battle Units">
+        <object>objects\o_battle_unit</object>
+        <object>objects\o_player_battle_unit</object>
+        <object>objects\o_enemy_battle_unit</object>
+      </objects>
+    </objects>
     <objects name="Characters">
       <object>objects\o_elizabeth</object>
       <object>objects\o_adam</object>
     </objects>
     <objects name="Decorations">
-      <object>objects\o_stump</object>
       <object>objects\o_decoration_parent</object>
+      <object>objects\o_stump</object>
       <object>objects\o_rock</object>
     </objects>
     <objects name="UI">
+      <object>objects\o_battle_ui</object>
       <object>objects\o_dialog</object>
       <object>objects\o_battle_unit_ui</object>
       <object>objects\o_speaker</object>
@@ -347,7 +348,6 @@
       <object>objects\o_message_ui</object>
       <object>objects\o_item_list_ui</object>
       <object>objects\o_item_use_ui</object>
-      <object>objects\o_battle_ui</object>
     </objects>
   </objects>
   <rooms name="rooms">

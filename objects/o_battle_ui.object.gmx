@@ -25,13 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// init the battle UI
+            <string>/// Initialize the battle ui
 event_inherited();
 index = 0;
-
 ACTION = 0;
 ITEM = 1;
 RUN = 2;
+
 </string>
           </argument>
         </arguments>
@@ -54,19 +54,18 @@ RUN = 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// move the ui
+            <string>/// Move the ui
 var targety;
 if (instance_exists(o_player_battle_unit)) {
     targety = 160+((o_player_battle_unit.state != battle_action_state)*64);
 } else {
-    target = 224;
+    targety = 224;
 }
-
 
 y = lerp(y, targety, .1);
 
 if (point_distance(x, y, x, 160) &lt;= 16 &amp;&amp; enabled) {
-    // move ui options
+    // Move ui options
     if (o_input.right_pressed) {
         index += 1;
     }
@@ -75,7 +74,7 @@ if (point_distance(x, y, x, 160) &lt;= 16 &amp;&amp; enabled) {
         index -= 1;
     }
     
-    // clamp the value
+    // Clamp the value
     index = clamp(index, ACTION, RUN);
     
     if (o_input.action) {
@@ -85,12 +84,14 @@ if (point_distance(x, y, x, 160) &lt;= 16 &amp;&amp; enabled) {
                     o_player_battle_unit.state = battle_approach_state;
                 }
                 break;
+                
             case ITEM:
                 enabled = false;
                 var item_list = instance_create(bbox_left+13, targety-sprite_height/2, o_item_list_ui);
                 item_list.y -= item_list.height+4;
                 item_list.parent = id;
-                break;
+            break;
+            
             case RUN: show_message("Run"); break;
         }
     }
@@ -117,10 +118,8 @@ if (point_distance(x, y, x, 160) &lt;= 16 &amp;&amp; enabled) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// draw the battle ui
+            <string>/// Draw the battle ui
 draw_self();
-
-// draw darker color if we're selected item
 draw_sprite_ext(s_battle_ui_action, 0, x-40, y, 1, 1, 0, make_colour_hsv(0, 0, 127+128*(index == ACTION)), 1);
 draw_sprite_ext(s_battle_ui_item, 0, x+4, y, 1, 1, 0, make_colour_hsv(0, 0, 127+128*(index == ITEM)), 1);
 draw_sprite_ext(s_battle_ui_run, 0, x+48, y, 1, 1, 0, make_colour_hsv(0, 0, 127+128*(index == RUN)), 1);

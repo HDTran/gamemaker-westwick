@@ -1,5 +1,4 @@
-/// item_option_info()
-
+///item_option_info()
 if (instance_exists(o_player_stats)) {
     with (o_player_stats) {
         var item = ds_list_find_value(items, other.parent.index);
@@ -11,7 +10,7 @@ if (instance_exists(o_player_stats)) {
     }
 }
 
-// hide the parent
+// Hide the parent
 visible = false;
 child = message;
 child.parent = id;
