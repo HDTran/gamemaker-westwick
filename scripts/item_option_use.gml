@@ -7,6 +7,7 @@ if (instance_exists(parent)) {
         if (instance_exists(o_player_battle_unit)) {
             o_player_battle_unit.state = battle_use_item_state;
             o_player_battle_unit.item_index = index;
+            instance_destroy();
         } else {
             // use item
             use_item_index(index);
