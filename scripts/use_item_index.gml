@@ -24,8 +24,7 @@ if (instance_exists(o_player_stats)) {
             }
             
             // Use the item
-            // script_execute(asset_get_index(item[? "effect"]), item[? "arguments"]);
-            show_message("Used " + item[? "name"]);
+            script_execute(asset_get_index(item[? "effect"]), item[? "arguments"]);
         }
     }
 }
