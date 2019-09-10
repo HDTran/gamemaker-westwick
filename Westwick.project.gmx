@@ -258,24 +258,24 @@
       <script>scripts\view_approach.gml</script>
     </scripts>
     <scripts name="UI Scripts">
-      <script>scripts\get_visible_text.gml</script>
-      <script>scripts\draw_nine_slice.gml</script>
-      <script>scripts\create_option.gml</script>
       <script>scripts\format_text.gml</script>
-      <script>scripts\say_hi.gml</script>
-      <script>scripts\mark_option_list.gml</script>
-      <script>scripts\create_message.gml</script>
-      <script>scripts\create_message_at_view_center.gml</script>
-      <script>scripts\create_items_option_list.gml</script>
+      <script>scripts\get_visible_text.gml</script>
+      <scripts name="Menu Option Scripts">
+        <script>scripts\menu_option_items.gml</script>
+      </scripts>
       <scripts name="Item Option Scripts">
         <script>scripts\item_option_use_ui.gml</script>
         <script>scripts\item_option_drop.gml</script>
         <script>scripts\item_option_use.gml</script>
         <script>scripts\item_option_info.gml</script>
       </scripts>
-      <scripts name="Menu Option Scripts">
-        <script>scripts\menu_option_items.gml</script>
-      </scripts>
+      <script>scripts\draw_nine_slice.gml</script>
+      <script>scripts\create_option.gml</script>
+      <script>scripts\say_hi.gml</script>
+      <script>scripts\mark_option_list.gml</script>
+      <script>scripts\create_message.gml</script>
+      <script>scripts\create_message_at_view_center.gml</script>
+      <script>scripts\create_items_option_list.gml</script>
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <script>scripts\set_tile_depth.gml</script>
@@ -288,6 +288,9 @@
       <script>scripts\get_item_data.gml</script>
     </scripts>
     <scripts name="Item Scripts">
+      <scripts name="Item Effect Scripts">
+        <script>scripts\heal_effect.gml</script>
+      </scripts>
       <script>scripts\pickup_item.gml</script>
       <script>scripts\drop_item_index.gml</script>
       <script>scripts\use_item_index.gml</script>
