@@ -20,7 +20,7 @@ if (is_enemy) {
     draw_health = stats[? "health"];
     defend = false;
     
-    // create the actions list
+    // Create the action list
     actions = create_action_list();
 }
 

@@ -11,7 +11,7 @@ var defending_unit = argument1;
 if (instance_exists(defender) && instance_exists(attacker)) {
     var damage = (attack+(attacker.level*3)+(1-defense*.05))*.5;
     
-    var total_damage = (damage+(critical*damage*(attacker.stats[? "critical"]/100)))/(defender.defend+1); // defender.defend holds the true/false boolean of whether it's in defend state so it's always 1 or 2
+    var total_damage = (damage+(critical*damage*(attacker.stats[? "critical"]/100)))/(defender.defend+1);
     total_damage *= modifier;
     
     // Deal the damage

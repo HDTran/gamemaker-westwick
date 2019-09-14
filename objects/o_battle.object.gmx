@@ -48,14 +48,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// check for play
+            <string>/// Check for play
 if (instance_exists(o_player_battle_unit) &amp;&amp; instance_exists(o_enemy_battle_unit)) {
     if (o_player_battle_unit.state == battle_wait_state &amp;&amp; o_enemy_battle_unit.state = battle_wait_state) {
-        // with is going to loop through both of them because they both inherit this
-        with (o_battle_unit) {
-            state = battle_idle_state;
-            play = true;
-        }
+        with (o_battle_unit) state = battle_idle_state;
+        play = true;
     }
 }
 </string>

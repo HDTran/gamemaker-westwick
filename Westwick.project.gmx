@@ -331,7 +331,6 @@
         <object>objects\o_battle_unit</object>
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
-        <object>objects\o_levelup_arrow</object>
       </objects>
     </objects>
     <objects name="Characters">
@@ -349,6 +348,7 @@
         <object>objects\o_battle_unit_ui</object>
         <object>objects\o_levelup</object>
         <object>objects\o_shine</object>
+        <object>objects\o_levelup_arrow</object>
       </objects>
       <object>objects\o_dialog</object>
       <object>objects\o_speaker</object>

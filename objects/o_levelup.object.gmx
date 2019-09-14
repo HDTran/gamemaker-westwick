@@ -25,10 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// visual representation
-image_speed = .7;
+            <string>image_speed = .7;
 
-// stop the transition so that levelup hands it
 if (instance_exists(o_fade_transition)) {
     with (o_fade_transition) instance_destroy();
 }
@@ -54,7 +52,7 @@ if (instance_exists(o_fade_transition)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// go to last room
+            <string>/// Go to last room
 var transition = instance_create(0, 0, o_fade_transition);
 transition.next_room = o_game.last_room;
 instance_destroy();
@@ -80,11 +78,10 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// we're going to set this in animation end event, if we are on the last frame
-if (image_index == image_number-1) {
+            <string>if (image_index == image_number-1) {
     if (chance(.2)) {
         instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), o_shine);
-    } 
+    }
 }
 </string>
           </argument>
@@ -109,7 +106,7 @@ if (image_index == image_number-1) {
           <argument>
             <kind>1</kind>
             <string>if (image_speed &gt; 0) {
-    image_index = image_number-1; // this is where we're setting it to last image in animation, allowing step to work
+    image_index = image_number-1;
     image_speed = 0;
     alarm[0] = room_speed*2;
     instance_create(x-48, y, o_levelup_arrow);
