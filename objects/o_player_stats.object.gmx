@@ -32,6 +32,7 @@ class = o_data.classes[? "elizabeth"];
 // Get the stats from the class
 stats = get_stats_from_class("elizabeth");
 draw_health = stats[? "health"];
+defend = false;
 
 // Items list
 items = ds_list_create();

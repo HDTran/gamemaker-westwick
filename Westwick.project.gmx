@@ -245,6 +245,7 @@
         <script>scripts\calculate_health.gml</script>
         <script>scripts\set_hitflash.gml</script>
         <script>scripts\create_action_list.gml</script>
+        <script>scripts\action_defend.gml</script>
       </scripts>
       <script>scripts\init_battle_unit.gml</script>
       <script>scripts\deal_damage.gml</script>
