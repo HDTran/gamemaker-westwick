@@ -1,7 +1,7 @@
 ///battle_use_item_state()
 // Enemites can't use items
 if (object_index != o_player_battle_unit) {
-    state = battle_idle_state;
+    state = battle_wait_state;
     exit;
 }
 
@@ -16,6 +16,6 @@ if (animation_hit_frame(5)) {
 // Return to the idle state
 if (animation_end()) {
     with (o_battle_unit) {
-        state = battle_idle_state;
+        state = battle_wait_state;
     }
 }
