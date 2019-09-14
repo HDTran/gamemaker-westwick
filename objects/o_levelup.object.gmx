@@ -55,7 +55,7 @@ if (instance_exists(o_fade_transition)) {
           <argument>
             <kind>1</kind>
             <string>/// go to last room
-var transition = instance_create(0, 0, fade_transition);
+var transition = instance_create(0, 0, o_fade_transition);
 transition.next_room = o_game.last_room;
 instance_destroy();
 </string>
@@ -137,7 +137,7 @@ if (image_index == image_number-1) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(s_levleup_frame, 0, x, y);
+            <string>draw_sprite(s_levelup_frame, 0, x, y);
 draw_sprite(s_levelup, 0, x, y);
 draw_self();
 </string>
