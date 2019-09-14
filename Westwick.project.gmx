@@ -328,6 +328,7 @@
         <object>objects\o_battle_unit</object>
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
+        <object>objects\o_levelup_arrow</object>
       </objects>
     </objects>
     <objects name="Characters">
@@ -340,9 +341,13 @@
       <object>objects\o_rock</object>
     </objects>
     <objects name="UI">
-      <object>objects\o_battle_ui</object>
+      <objects name="Battle UI">
+        <object>objects\o_battle_ui</object>
+        <object>objects\o_battle_unit_ui</object>
+        <object>objects\o_levelup</object>
+        <object>objects\o_shine</object>
+      </objects>
       <object>objects\o_dialog</object>
-      <object>objects\o_battle_unit_ui</object>
       <object>objects\o_speaker</object>
       <object>objects\o_ui_parent</object>
       <object>objects\o_option_list_ui_parent</object>
