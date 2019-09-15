@@ -29,6 +29,7 @@
 classes = get_class_data();
 items = get_item_data();
 actions = get_action_data();
+sprites = get_sprite_data();
 </string>
           </argument>
         </arguments>
@@ -55,6 +56,7 @@ actions = get_action_data();
 ds_map_destroy(classes);
 ds_map_destroy(items);
 ds_map_destroy(actions);
+ds_map_destroy(sprites);
 </string>
           </argument>
         </arguments>

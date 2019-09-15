@@ -121,6 +121,7 @@
       <sprite>sprites\s_shine</sprite>
       <sprite>sprites\s_sonar_attack</sprite>
       <sprite>sprites\s_shield</sprite>
+      <sprite>sprites\s_fire_spell</sprite>
     </sprites>
     <sprites name="Items">
       <sprite>sprites\s_small_log</sprite>
@@ -240,6 +241,7 @@
           <script>scripts\battle_wait_state.gml</script>
           <script>scripts\battle_hit_state.gml</script>
           <script>scripts\battle_death_state.gml</script>
+          <script>scripts\battle_ranged_attack_state.gml</script>
         </scripts>
         <script>scripts\get_stats_from_class.gml</script>
         <script>scripts\calculate_health.gml</script>
@@ -270,6 +272,7 @@
       <script>scripts\get_class_data.gml</script>
       <script>scripts\get_item_data.gml</script>
       <script>scripts\get_action_data.gml</script>
+      <script>scripts\get_sprite_data.gml</script>
     </scripts>
     <script>scripts\draw_bar.gml</script>
     <script>scripts\battle_set_sprite.gml</script>

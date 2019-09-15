@@ -29,9 +29,9 @@
 width = 80;
 height = 44;
 
-// create the option list
+// Create the options list
 options = ds_list_create();
-for (var i = 0; i &lt; ds_list_size(o_player_stats.actions); i++) {
+for (var i=0; i&lt;ds_list_size(o_player_stats.actions); i++) {
     var action = o_player_stats.actions[| i];
     options[| i] = create_option(action[? "name"], action_option_use_ui);
 }
@@ -58,10 +58,10 @@ mark_option_list(options);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Draw the action list
+            <string>/// Draw the option list
 event_inherited();
 
-// Draw the actions list
+// Draw the options list
 for (var i=index-1; i&lt;=index+1; i++) {
     if (i &gt;= 0 &amp;&amp; i &lt; ds_list_size(options)) {
         var option = options[| i];
@@ -72,7 +72,7 @@ for (var i=index-1; i&lt;=index+1; i++) {
 }
 
 // Draw the caret for the option selection
-draw_sprite(s_ui_caret, 0, x+6, y+6+10*1);
+draw_sprite(s_ui_caret, 0, x+6, y+6+10);
 </string>
           </argument>
         </arguments>
