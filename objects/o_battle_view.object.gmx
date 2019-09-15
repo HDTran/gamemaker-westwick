@@ -31,6 +31,8 @@ spd = .1;
 x = 256;
 y = room_height/2;
 state = battle_view_intro_state;
+// fixes desync of moving from 0, 0 because target x and target y isn't set to default like in running battle_view_intro_state();
+battle_view_intro_state(); 
 </string>
           </argument>
         </arguments>

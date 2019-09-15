@@ -53,7 +53,7 @@ image_index = ceil(o_player_battle_unit.image_index) - o_player_battle_unit.imag
           <argument>
             <kind>1</kind>
             <string>if (animation_hit_frame(7)) {
-    view_screenshake(8, seconds_to_steps(.2));
+    view_screenshake(4, seconds_to_steps(.2));
     
     // hit the enemy
     var critical = chance(.7);

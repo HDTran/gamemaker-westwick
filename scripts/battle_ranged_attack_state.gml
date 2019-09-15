@@ -7,6 +7,14 @@ var effect_frame = argument3;
 // Set the sprite
 battle_set_sprite(RANGED, 0);
 
+var targetx = xstart+BATTLE_SPACE*image_xscale;
+var sprite_data = o_data.sprites[? sprite_get_name(sprite[RANGED])];
+if (animation_hit_frame(sprite_data[? "hit frame"])) {
+    // set the view state
+    o_battle_view.target[? "x"] = targetx-32*image_xscale; // enemy 32 pixels toward center
+    o_battle_view.state = battle_view_focus_state;
+}
+
 // Hit
 if (animation_hit_frame(effect_frame)) {
     var effect = instance_create(x+xoffset, y+yoffset, effect);
