@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// Initialize the Elizabeth object
+event_inherited();
 spd = 2;
 image_speed = 0;
 facing = RIGHT;
@@ -62,11 +63,7 @@ sprite[DOWN] = s_elizabeth_down;
             <string>/// Control the state
 script_execute(state);
 
-// Set the depth
-depth = -y;
-
-// Update the sprite
-sprite_index = sprite[facing];
+event_inherited();
 </string>
           </argument>
         </arguments>

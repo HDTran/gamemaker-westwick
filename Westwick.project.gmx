@@ -317,6 +317,7 @@
     </scripts>
     <scripts name="Cutscene Scripts">
       <script>scripts\wait.gml</script>
+      <script>scripts\character_move_to.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

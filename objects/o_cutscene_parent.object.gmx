@@ -103,7 +103,7 @@ if (instance_exists(o_view)) {
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="3" enumb="2">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -121,7 +121,12 @@ if (instance_exists(o_view)) {
           <argument>
             <kind>1</kind>
             <string>switch (action) {
-    case 0: wait(2); break;
+    case 0:
+        character_move_to(o_elizabeth, 32, 0, true, o_elizabeth.spd, 0);
+        break;
+    case 1:
+        character_move_to(o_elizabeth, 0, -16, true, o_elizabeth.spd, .5);
+        break;
     default: instance_destroy();
 }
 </string>
