@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>/// init the character parent
+event_inherited();
 targetx = noone;
 targety = noone;
 

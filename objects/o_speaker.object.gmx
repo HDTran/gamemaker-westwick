@@ -33,7 +33,7 @@ dialog_page = 0;
 dialog_state = 0;
 
 // Set the default portrait
-portrat = s_default_portrait;
+portrait = s_default_portrait;
 text[0] = "Empty";
 </string>
           </argument>

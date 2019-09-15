@@ -32,6 +32,7 @@ image_speed = 0;
 facing = RIGHT;
 state = elizabeth_move_state;
 last_room = room;
+portrait = s_elizabeth_portrait;
 
 // Create the sprite array
 sprite[RIGHT] = s_elizabeth_right;

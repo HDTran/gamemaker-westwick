@@ -318,6 +318,7 @@
     <scripts name="Cutscene Scripts">
       <script>scripts\wait.gml</script>
       <script>scripts\character_move_to.gml</script>
+      <script>scripts\character_show_dialog.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">

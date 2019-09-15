@@ -105,7 +105,7 @@ if (o_input.action) {
         text_count = 0;
         text_visible = "";
         if (text_page &gt; array_length_1d(text)-1) {
-            if (cutscene != noone) {
+            if (instance_exists(cutscene)) {
                 cutscene.action++;
             }
             instance_destroy();

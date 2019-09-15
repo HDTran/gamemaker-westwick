@@ -125,7 +125,10 @@ if (instance_exists(o_view)) {
         character_move_to(o_elizabeth, 32, 0, true, o_elizabeth.spd, 0);
         break;
     case 1:
-        character_move_to(o_elizabeth, 0, -16, true, o_elizabeth.spd, .5);
+        character_show_dialog(o_elizabeth, array("Hey! This is a cutscene.", "Here is some more dialog."));
+        break;
+    case 2:
+        character_show_dialog(o_adam, array("Hi. I'm Adam."));
         break;
     default: instance_destroy();
 }
