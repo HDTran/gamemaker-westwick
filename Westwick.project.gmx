@@ -242,6 +242,7 @@
           <script>scripts\battle_hit_state.gml</script>
           <script>scripts\battle_death_state.gml</script>
           <script>scripts\battle_ranged_attack_state.gml</script>
+          <script>scripts\battle_fire_spell_state.gml</script>
         </scripts>
         <script>scripts\get_stats_from_class.gml</script>
         <script>scripts\calculate_health.gml</script>
@@ -339,6 +340,10 @@
         <object>objects\o_battle_unit</object>
         <object>objects\o_player_battle_unit</object>
         <object>objects\o_enemy_battle_unit</object>
+      </objects>
+      <objects name="Battle Effects">
+        <object>objects\o_projectile_parent</object>
+        <object>objects\o_fire_spell</object>
       </objects>
     </objects>
     <objects name="Characters">

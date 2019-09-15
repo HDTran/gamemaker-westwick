@@ -1,7 +1,7 @@
 ///battle_ranged_attack_state(xoffset, yoffset, effect, effect_frame)
 var xoffset = argument0;
 var yoffset = argument1;
-var effect argument2;
+var effect = argument2;
 var effect_frame = argument3;
 
 // Set the sprite
