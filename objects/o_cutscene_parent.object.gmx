@@ -128,7 +128,7 @@ if (instance_exists(o_view)) {
         character_show_dialog(o_elizabeth, array("Hey! This is a cutscene.", "Here is some more dialog."));
         break;
     case 2:
-        character_show_dialog(o_adam, array("Hi. I'm Adam."));
+        character_face_direction(o_elizabeth, DOWN, .5);
         break;
     case 3:
         cutscene_show_message("The cutscene is over.");
