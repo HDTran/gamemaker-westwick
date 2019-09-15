@@ -130,6 +130,9 @@ if (instance_exists(o_view)) {
     case 2:
         character_show_dialog(o_adam, array("Hi. I'm Adam."));
         break;
+    case 3:
+        cutscene_show_message("The cutscene is over.");
+        break;
     default: instance_destroy();
 }
 </string>
