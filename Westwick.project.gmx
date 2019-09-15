@@ -263,11 +263,13 @@
       <script>scripts\encounter.gml</script>
       <script>scripts\activate_interactable_object.gml</script>
       <script>scripts\elizabeth_talking_state.gml</script>
+      <script>scripts\character_cutscene_state.gml</script>
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <scripts name="View Scripts">
       <script>scripts\view_approach.gml</script>
       <script>scripts\view_screenshake.gml</script>
+      <script>scripts\view_cutscene_state.gml</script>
     </scripts>
     <script>scripts\set_tile_depth.gml</script>
     <scripts name="Data Scripts">
@@ -349,6 +351,7 @@
       </objects>
     </objects>
     <objects name="Characters">
+      <object>objects\o_character_parent</object>
       <object>objects\o_elizabeth</object>
       <object>objects\o_adam</object>
     </objects>
@@ -377,6 +380,9 @@
       <object>objects\o_message_ui</object>
       <object>objects\o_item_list_ui</object>
       <object>objects\o_item_use_ui</object>
+    </objects>
+    <objects name="Cutscenes">
+      <object>objects\o_cutscene_parent</object>
     </objects>
   </objects>
   <rooms name="rooms">
