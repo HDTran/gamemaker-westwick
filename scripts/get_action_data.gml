@@ -14,5 +14,10 @@ return json_decode('{
         "name"          : "Fire Spell",
         "action"        : "battle_fire_spell_state",
         "info"          : "Has a lower damage#rate, but a higher#critical chance."
+    },
+    "sonar spell" : {
+        "name"          : "Sonar Spell",
+        "action"        : "battle_sonar_spell_state",
+        "info"          : "A basic ranged#attack."
     }
 }');

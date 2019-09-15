@@ -11,7 +11,6 @@ return json_decode('
         "experience" : 0,
         "actions" : []
     },
-    
     "spider" : {
         "name"          : "Spider",
         "health"        : 3,
@@ -19,7 +18,17 @@ return json_decode('
         "defense"       : 4,
         "speed"         : 10,
         "critical"      : 5,
-        "experience"    : 100,
+        "experience"    : 10,
         "actions"       : ["attack", "defend"]
+    },
+    "gargoyle" : {
+        "name"          : "Gargoyle",
+        "health"        : 10,
+        "attack"        : 4,
+        "defense"       : 8,
+        "speed"         : 4,
+        "critical"      : 10,
+        "experience"    : 100,
+        "actions"       : ["sonar spell", "defend"]
     }
 }');
