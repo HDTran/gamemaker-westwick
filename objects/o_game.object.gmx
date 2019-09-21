@@ -43,6 +43,7 @@ last_room = r_town;
 
 // Create the save data
 global.save_data = ds_map_create();
+global.load = false;
 </string>
           </argument>
         </arguments>

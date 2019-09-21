@@ -279,6 +279,8 @@
       <script>scripts\get_action_data.gml</script>
       <script>scripts\get_sprite_data.gml</script>
       <script>scripts\save_game.gml</script>
+      <script>scripts\load_game.gml</script>
+      <script>scripts\save_key.gml</script>
     </scripts>
     <script>scripts\draw_bar.gml</script>
     <script>scripts\battle_set_sprite.gml</script>
@@ -346,6 +348,7 @@
       <object>objects\o_random_encounters</object>
       <object>objects\o_last_encounter</object>
       <object>objects\o_interactable_parent</object>
+      <object>objects\o_start_room_loader</object>
     </objects>
     <objects name="Battle">
       <object>objects\o_battle_transition</object>

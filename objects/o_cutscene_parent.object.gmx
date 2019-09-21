@@ -30,6 +30,11 @@ action = 0;
 last_room = noone;
 persistent = true; // parent object, we do it in code so children inherit
 
+if (ds_map_find_value(global.save_data, save_key())) {
+    instance_destroy();
+    exit;
+}
+
 // set all characters to the cutscene state
 if (instance_exists(o_character_parent)) {
     with (o_character_parent) {
@@ -75,6 +80,8 @@ if (instance_exists(o_elizabeth)) {
 if (instance_exists(o_view)) {
     o_view.state = view_follow_elizabeth_state;
 }
+
+global.save_data[? save_key()] = true;
 </string>
           </argument>
         </arguments>
