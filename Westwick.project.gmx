@@ -218,6 +218,7 @@
       <script>scripts\chance.gml</script>
       <script>scripts\seconds_to_steps.gml</script>
       <script>scripts\is_in_array.gml</script>
+      <script>scripts\list_to_array.gml</script>
     </scripts>
     <scripts name="Sprite Scripts">
       <script>scripts\animation_end.gml</script>
@@ -277,6 +278,7 @@
       <script>scripts\get_item_data.gml</script>
       <script>scripts\get_action_data.gml</script>
       <script>scripts\get_sprite_data.gml</script>
+      <script>scripts\save_game.gml</script>
     </scripts>
     <script>scripts\draw_bar.gml</script>
     <script>scripts\battle_set_sprite.gml</script>
@@ -295,6 +297,10 @@
       <script>scripts\get_visible_text.gml</script>
       <scripts name="Menu Option Scripts">
         <script>scripts\menu_option_items.gml</script>
+        <script>scripts\menu_option_save.gml</script>
+        <script>scripts\menu_option_load.gml</script>
+        <script>scripts\menu_option_exit.gml</script>
+        <script>scripts\menu_option_stats.gml</script>
       </scripts>
       <scripts name="Item Option Scripts">
         <script>scripts\item_option_use_ui.gml</script>
