@@ -339,6 +339,7 @@
       <object>objects\o_data</object>
       <object>objects\o_view_parent</object>
       <object>objects\o_view</object>
+      <object>objects\o_audio_player</object>
     </objects>
     <objects name="Misc">
       <object>objects\o_solid</object>
