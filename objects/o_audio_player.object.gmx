@@ -27,11 +27,11 @@
             <kind>1</kind>
             <string>/// init the audio player
 fade = true;
-fade_spd = .01;
+fade_spd = .02;
 
 // create the music emitter
 music_emitter = audio_emitter_create();
-music_volume = .5;
+music_volume = 0;
 music_max_volume = 1;
 
 // store current song, previous song, and next song
@@ -85,11 +85,9 @@ if (audio_exists(next_song)) {
 } else {
     // fade in
     if (fade) {
-        if (fade) {
-            music_volume = approach(music_volume, music_max_volume, fade_spd);
-        } else {
-            music_volume = music_max_volume;
-        }
+        music_volume = approach(music_volume, music_max_volume, fade_spd);
+    } else {
+        music_volume = music_max_volume;
     }
 }
 
@@ -100,6 +98,32 @@ if (!audio_is_playing(current_song) &amp;&amp; audio_exists(current_song)) {
 
 // update the audio volume
 audio_emitter_gain(music_emitter, music_volume);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="5">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (room == r_battle) {
+    // play the previous song
+    audio_set_next_song(previous_song, true);
+}
 </string>
           </argument>
         </arguments>
