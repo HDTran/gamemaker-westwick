@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>next_room = r_town;
+
+audio_play_sound_effect(a_enter_next_area, false, 50);
 </string>
           </argument>
         </arguments>

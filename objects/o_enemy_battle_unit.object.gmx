@@ -28,7 +28,7 @@
             <string>/// Create the player battle object
 event_inherited();
 
-init_battle_unit("gargoyle", 1, true, .3, .4, .2, .4);
+init_battle_unit("spider", 1, true, .3, .4, .2, .4);
 </string>
           </argument>
         </arguments>

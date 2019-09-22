@@ -34,11 +34,15 @@ music_emitter = audio_emitter_create();
 music_volume = 0;
 music_max_volume = 1;
 
+// create the sound effects emitter
+sfx_emitter = audio_emitter_create();
+sfx_volume = .5;
+sfx_max_volume = .5;
+
 // store current song, previous song, and next song
 previous_song = noone;
 current_song = noone;
 next_song = a_town_music;
-
 
 </string>
           </argument>
@@ -98,6 +102,7 @@ if (!audio_is_playing(current_song) &amp;&amp; audio_exists(current_song)) {
 
 // update the audio volume
 audio_emitter_gain(music_emitter, music_volume);
+audio_emitter_gain(sfx_emitter, sfx_volume);
 </string>
           </argument>
         </arguments>
@@ -123,6 +128,35 @@ audio_emitter_gain(music_emitter, music_volume);
             <string>if (room == r_battle) {
     // play the previous song
     audio_set_next_song(previous_song, true);
+    sfx_volume = .5;
+    sfx_max_volume = .5;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// increase sfx volume
+if (room == r_battle) {
+    sfx_volume = .8;
+    sfx_max_volume = .8;
 }
 </string>
           </argument>
@@ -146,8 +180,9 @@ audio_emitter_gain(music_emitter, music_volume);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// destroy the emitter
+            <string>/// destroy the emitters
 audio_emitter_free(music_emitter);
+audio_emitter_free(sfx_emitter);
 </string>
           </argument>
         </arguments>

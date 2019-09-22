@@ -18,3 +18,7 @@ if (x == targetx) {
     state = battle_attack_state;
 }
 
+// play sound
+if (animation_hit_frame(1)) {
+    audio_play_sound_effect(a_attack_swordswing, false, 80);
+}
