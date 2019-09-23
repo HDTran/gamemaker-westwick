@@ -280,6 +280,7 @@
       <script>scripts\activate_interactable_object.gml</script>
       <script>scripts\elizabeth_talking_state.gml</script>
       <script>scripts\character_cutscene_state.gml</script>
+      <script>scripts\move_intended_direction.gml</script>
     </scripts>
     <script>scripts\view_follow_elizabeth_state.gml</script>
     <scripts name="View Scripts">
