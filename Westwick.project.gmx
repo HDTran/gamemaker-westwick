@@ -370,6 +370,7 @@
       <object>objects\o_last_encounter</object>
       <object>objects\o_interactable_parent</object>
       <object>objects\o_start_room_loader</object>
+      <object>objects\o_game_over</object>
     </objects>
     <objects name="Battle">
       <object>objects\o_battle_transition</object>
